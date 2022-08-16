@@ -1,0 +1,262 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="UTF-8"%>
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>National Exihibition</title>
+
+    <!-- CSS -->
+    <link href="css/lightbox.css" rel="stylesheet" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <!-- Style -->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      ul.navbar-nav li.dropdown:hover > ul.dropdown-menu { 
+        display:block; margin:0; 
+      }
+
+      main{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+
+      header{
+        font-family: 'Noto Sans KR', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index2.jsp"><i class="fa-solid fa-building-columns"></i> NaExhibition</a>  
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="NoticeForm.html">공지사항</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              카테고리
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">요일별</a></li>
+              <li><a class="dropdown-item" href="#">테마별</a></li>
+              <li><a class="dropdown-item" href="#">지역별</a></li>
+            </ul>
+          </li>
+        </ul>
+        <%
+        	if(session.getAttribute("loginId") == null){
+        %>
+        <a href="loginForm.html"><button type="button" class="btn btn-outline-success me-2">Login</button></a>
+        <button type="button" class="btn btn-outline-success me-4">회원가입</button>
+         <%
+        	}
+        	else{
+       %>
+        <!-- 로그인 후 -->
+        <div class="flex-shrink-0 dropdown me-2">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="logout.comm">Sign out</a></li>
+          </ul>
+        </div>
+        <%
+        	}
+        %>
+        <form class="d-flex w-40 me-2">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>  
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" style="margin-bottom: 30px;">
+      <div class="carousel-item active" style="width: 100%; height: 500px;">
+        <img src="images/전시1.jpg" href="#" width="100%" height="100%" >
+      </div>
+      <div class="carousel-item" style="width: 100%; height: 500px;">
+       <img src="images/전시2.jpg" width="100%" height="100%">
+      </div>
+      <div class="carousel-item" style="width: 100%; height: 500px;">
+       <img src="images/전시3.jpg" width="100%" height="100%">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4" style="border-right : 1px solid #a6a6a6 ;">
+        <img class="rounded mx-auto d-block"src="https://naverbooking-phinf.pstatic.net/20220627_97/1656324428111bGY3U_JPEG/image.jpg?type=ff1242_1242" style="width: 226px; height: 280px; border: 1px solid black;">
+        <br>
+        <h2>The Border 경계를 건너는 법</h2>
+        <p>
+          <br>
+          2022.07.15 - 10.03<br>
+          운영시간 : 12시-7시<br>
+          장소: 대구광역시 북구 서변동 1630-233 mrnw</p>
+        <p><a class="btn btn-secondary" href="#">상세정보보기</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4" style="border-right : 1px solid #a6a6a6 ;">
+        <img class="rounded mx-auto d-block" src="http://hapjungjigu.com/wp-content/uploads/2022/07/%EA%B9%80%EB%AF%BC%EC%B1%84-%ED%8F%AC%EC%8A%A4%ED%84%B0.png" style="width: 226px; height: 280px; margin-bottom: 5px;  border: 1px solid black;">
+        <br>
+        <h2>A로 부터</h2>
+        <p>
+          김민채 개인전<br>
+          2022.2.22 - 8.21<br>
+          운영시간: 1시-7시<br>
+          장소: 합정지구(서울시 마포구 월드컵로 40)</p>
+        <p><a class="btn btn-secondary" href="#">상세정보보기</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img  class="rounded mx-auto d-block" src="images/강정주.jpeg" style="width: 226px; height: 280px; margin-bottom: 5px;  border: 1px solid black;">
+        <br>
+        <h2>강정주 : Scent of Happiness</h2>
+        <p>
+          강정주 개인전<br>
+          2022.6.21 - 7.16<br>
+          운영시간: 화~토 10시-6시<br>
+          장소: 대구광역시 수성구 국채보상로162길 26 갤러리 여울</p>
+        <p><a class="btn btn-secondary" href="#">상세정보보기</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">A로 부터</h2>
+        <p class="lead">김민채 개인전<br>
+          2022.2.22 - 8.21<br>
+          운영시간: 1시-7시<br>
+          장소: 합정지구(서울시 마포구 월드컵로 40)</p>
+      </div>
+      <div class="col-md-5">
+        <a href="images/김민채-포스터.png" data-lightbox="image-1" data-title="My caption"><img class="rounded mx-auto d-block" src="images/김민채-포스터.png" style="width: 410px; height: 500px; margin-bottom: 5px;"></a>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+<!-- jquery script -->
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"
+></script>
+<!-- lightbox script -->
+<script src="js/lightbox.js"></script>
+<!-- fontawesome script -->
+<script src="https://kit.fontawesome.com/69be5a8640.js" crossorigin="anonymous"></script>
+<!-- bootstrap script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
