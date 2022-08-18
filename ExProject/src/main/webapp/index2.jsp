@@ -66,7 +66,7 @@
             <a class="nav-link" aria-current="page" href="NoticeForm.html">공지사항</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
+            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회목록</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
@@ -236,7 +236,7 @@
 
     <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+  </div>
 
 
   <!-- FOOTER -->
