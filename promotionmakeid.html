@@ -25,6 +25,7 @@
     
 
     <style>
+      
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -134,10 +135,11 @@
 
             <div class="col-12">
               <label for="address" class="form-label">주소</label><br>
-              <input type="text" id="postcode" placeholder="우편번호">
               <input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
+              <input type="text" id="postcode" placeholder="우편번호" class="form-control">
+              
               <input class="form-control"  type="text" id="address" placeholder="주소"><br>
-              <input type="text" id="detailAddress" placeholder="상세주소">
+              <input type="text" id="detailAddress" placeholder="상세주소" class="form-control">
               <div class="invalid-feedback">
                주소를 확인해 주세요.
               </div>
@@ -225,5 +227,9 @@
         }).open();
     }
 </script>
+<footer class="container">
+  <p class="float-end"><a href="#">맨위로 올라가기</a></p>
+  <p>&copy; EX-project &middot; <a href="#">admin</a> &middot; <a href="#">홈페이지</a></p>
+</footer>
     </body>
 </html>
