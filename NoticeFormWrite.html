@@ -78,6 +78,7 @@
     
       .container{
         margin-top: 10px;
+        font-size: small;
       }
       .writeform{
         margin: 100px;
@@ -102,25 +103,20 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="NoticeForm.html" style="color: white; font-weight: bold;">공지사항</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              카테고리
-            </a>
+            <a class="nav-link dropdown-toggle" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">요일별</a></li>
               <li><a class="dropdown-item" href="#">테마별</a></li>
               <li><a class="dropdown-item" href="#">지역별</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
+          </li>
         </ul>
         <a href="loginForm.html"><button type="button" class="btn btn-outline-success me-2">Login</button></a>
-        <button type="button" class="btn btn-outline-success me-4">회원가입</button>
+        <button type="button" class="btn btn-outline-success me-4" onclick="location.href='makeidform.html'">회원가입</button>
         
         <!-- 로그인 후 -->
         <!--<div class="flex-shrink-0 dropdown me-2">
@@ -186,9 +182,9 @@
 
 <!--푸터-->
 <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
+  <p class="float-end"><a href="#">맨위로 올라가기</a></p>
+  <p>&copy; EX-project &middot; <a href="#">admin</a> &middot; <a href="#">홈페이지</a></p>
+</footer>
   
 </main>
 
