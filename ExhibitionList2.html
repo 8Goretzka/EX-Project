@@ -25,6 +25,7 @@
 
     <!-- Style -->
     <style>
+      
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -70,41 +71,65 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
-    
+      .search{
+        width: 400px;
+        margin-left: 100px;
+      }
       header{
         font-family: 'Noto Sans KR', sans-serif;
       }
      
-    
+     
       .container{
-        margin-top: 10px;
+        margin-top: 20px;
         font-size: small;
       }
-      .writeform{
-        margin: 100px;
+      .paging{
+        width: 110px;
+        margin: auto;
       }
-      .form-group-content{
-        
-      }
-    
+    .writebutton{
+        width: 400px;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+    .imgtable{
+      width: 1500px;
+      margin: auto;
+    }
+    .card-img-top{
+     width: 300px;
+     height: 400px;
+    }
+    .exhibitionform{
+      margin: 100px;
+      /* width: 1500px; */
+    }
+    .card{
+      display: inline-block;
+      margin: 15px;
+    }
+    .card-img-top{
+      width: 15rem;
+      height: 20rem;
+    }
  
-    
+
     </style>
   </head>
   <body>
     
 <header>
-  <!--navbar-->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><i class="fa-solid fa-building-columns"></i> NaExhibition</a>  
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="NoticeForm.html" style="color: white; font-weight: bold;">공지사항</a>
+            <a class="nav-link" aria-current="page" href="NoticeForm.html">공지사항</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
+            <a class="nav-link dropdown-toggle" aria-current="page" href="ExhibitionList.html" style="color: white; font-weight: bold;">전시회 목록</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">요일별</a></li>
               <li><a class="dropdown-item" href="#">테마별</a></li>
@@ -145,41 +170,70 @@
   <div class="bg-wrap">
     <div class="bg-image"><img src="images/전시3.jpg" alt=""></div>
     <div class="bg-text">
-        <p>공지사항</p>
-        <p style="font-size: 30px;">comunity</p>
+        <p>전시회목록</p>
+        <p style="font-size: 30px;">ExhibitionList</p>
     </div>
   </div>
   <div>
-    <h1 style="text-align: center; margin-top: 60px;" >글작성</h1>
-    <hr>
+    <h1 style="text-align: center; margin-top: 60px;" >전시회목록</h1>
   </div>
-<!--글작성폼-->
-
-<div class="writeform">
-  <form>
-    <div class="form-group">
-        <label for="title">제목</label>
-        <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
-    </div>
-   
-    <div class="form-group-content">
-        <label for="content" >내용</label>
-        <textarea class="form-control" id="content" placeholder="내용을 입력하세요"  rows="20" cols="10" ></textarea>
-    </div>
-    
-      <div class="form-group">
-        <label for="exampleFormControlFile1">공지사항 파일 등록</label><br>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-      </div>
-    
-  </form>
-  <div style="margin-top: 20px;">
-  <a href="NoticeForm.html" role="button" class="btn btn-secondary">취소</a>
-  <button type="button" class="btn btn-primary" id="btn-save">등록</button>
-  </div>
+<!--전시회 검색 폼-->
+<div class="search">
+    <form id="search-form" method="get" action="">		
+        <div class="search">
+            <select style="width: 100px;" class="" name="target">
+                <option value="all">전체</option>
+                <option value="title">제목</option>
+                <option value="reviewer">전시회주최자</option>
+            </select>
+            <input size="10" type="text" name="keyword" value="">
+            <button type="submit" class="btn btn-outline-secondary" >검색</button>
+        </div>
+    </form>
 </div>
- </div>
+<hr>
+<!--전시회 목록 폼-->
+<div class="exhibitionform">
+  <div class="card" style="width: 30%;">
+    <img class="card-img-top" src="images/김민채-포스터.png" alt="Card image cap"style="width: 100%;" >
+    <div class="card-body">
+      <h5 class="card-title">김민채 개인전</h5>
+      <p class="card-text">2022.6.21 - 7.16<br>
+          운영시간: 화~토 10시-6시<br>
+          장소: 대구광역시 수성구 국채보상로162길 26 갤러리 여울</p>
+      <a href="ExhibitionDetail.html" class="btn btn-outline-secondary">상세정보보기</a>
+    </div>
+  </div>
+  
+  
 
+</div>
+<!--페이징-->
+<div class="paging" style="text-align: center;">
+    <div aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="ExhibitionList.html" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="ExhibitionList.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+</div>
+<!--글작성 버튼-->
+<div class="writebutton">
+      <a href="NoticeFormWrite.html">
+      <button type="submit" class="btn btn-secondary mb-3"  >새글쓰기</button>
+      </a>
+</div>
 <!--푸터-->
 <footer class="container">
   <p class="float-end"><a href="#">맨위로 올라가기</a></p>

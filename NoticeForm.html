@@ -25,6 +25,7 @@
 
     <!-- Style -->
     <style>
+      
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -87,6 +88,7 @@
       }
       .container{
         margin-top: 20px;
+        font-size: small;
       }
       .paging{
         width: 110px;
@@ -112,25 +114,20 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="NoticeForm.html" style="color: white; font-weight: bold;">공지사항</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              카테고리
-            </a>
+            <a class="nav-link dropdown-toggle" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">요일별</a></li>
               <li><a class="dropdown-item" href="#">테마별</a></li>
               <li><a class="dropdown-item" href="#">지역별</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
+          </li>
         </ul>
         <a href="loginForm.html"><button type="button" class="btn btn-outline-success me-2">Login</button></a>
-        <button type="button" class="btn btn-outline-success me-4">회원가입</button>
+        <button type="button" class="btn btn-outline-success me-4" onclick="location.href='makeidform.html'">회원가입</button>
         
         <!-- 로그인 후 -->
         <!--<div class="flex-shrink-0 dropdown me-2">
@@ -194,94 +191,67 @@
         <tbody class="table-group-divider">
           <tr>
             <th scope="row">1</th>
-            <td>필독 공지사항 입니다</td>
+            <td ><a style="font-weight: bold;">필독 공지사항 입니다</a></td>
             <td>관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>필독 공지사항 입니다</td>
+            <td>2022년 8월 10일 수요일 서버점검 안내</td>
             <td>관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td> 공지사항 입니다</td>
+            <td> 엣지브라우저 오류 안내</td>
             <td>관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td> 공지사항 입니다</td>
+            <td> 2022년 8월 11일 목요일 긴급 점검 안내 </td>
             <td>관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">5</th>
-            <td> 공지사항 입니다</td>
+            <td> 전시회 전화문의 안내</td>
             <td>관리자</td>
-            <td>2020/08/08</td>
+            <td>2020/08/01</td>
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td> 공지사항 입니다</td>
+            <td> 김경민 : GOLF & ART --전시회 공지사항</td>
             <td>홍보담당관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">7</th>
-            <td> 공지사항 입니다</td>
+            <td> DAYLIGHT&MOONLIGHT --전시회공지사항</td>
             <td>홍보담당관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">8</th>
-            <td> 공지사항 입니다</td>
+            <td> 한국소년 : BE MY OWN HERO --일정 변경 안내.</td>
             <td>홍보담당관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">9</th>
-            <td> 공지사항 입니다</td>
+            <td> 썸머그린 개인전 --우천취소 안내.</td>
             <td>홍보담당관리자</td>
             <td>2020/08/08</td>
           </tr>
           <tr>
             <th scope="row">10</th>
-            <td> 공지사항 입니다</td>
+            <td> 김동해hiddenconnection --공지사항</td>
             <td>홍보담당관리자</td>
             <td>2020/08/08</td>
           </tr>
-          <tr>
-            <th scope="row">11</th>
-            <td> 공지사항 입니다</td>
-            <td>홍보담당관리자</td>
-            <td>2020/08/08</td>
-          </tr>
-          <tr>
-            <th scope="row">12</th>
-            <td> 공지사항 입니다</td>
-            <td>홍보담당관리자</td>
-            <td>2020/08/08</td>
-          </tr>
-          <tr>
-            <th scope="row">13</th>
-            <td> 공지사항 입니다</td>
-            <td>홍보담당관리자</td>
-            <td>2020/08/08</td>
-          </tr>
-          <tr>
-            <th scope="row">14</th>
-            <td> 공지사항 입니다</td>
-            <td>홍보담당관리자</td>
-            <td>2020/08/08</td>
-          </tr>
-          <tr>
-            <th scope="row">15</th>
-            <td> 공지사항 입니다</td>
-            <td>홍보담당관리자</td>
-            <td>2020/08/08</td>
-          </tr>
+          
+          
+          
         
 
          
@@ -316,9 +286,9 @@
 </div>
 <!--푸터-->
 <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
+  <p class="float-end"><a href="#">맨위로 올라가기</a></p>
+  <p>&copy; EX-project &middot; <a href="#">admin</a> &middot; <a href="#">홈페이지</a></p>
+</footer>
   
 </main>
 

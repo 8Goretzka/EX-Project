@@ -59,14 +59,14 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><i class="fa-solid fa-building-columns"></i> NaExhibition</a>  
+      <a class="navbar-brand" href="index2.jsp"><i class="fa-solid fa-building-columns"></i> NaExhibition</a>  
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="NoticeForm.html">공지사항</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회목록</a>
+            <a class="nav-link" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="ReviewTable.html">전시회 후기</a>
@@ -236,7 +236,7 @@
 
     <!-- /END THE FEATURETTES -->
 
-  </div>
+  </div><!-- /.container -->
 
 
   <!-- FOOTER -->

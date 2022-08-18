@@ -25,6 +25,7 @@
 
     <!-- Style -->
     <style>
+      
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -70,41 +71,65 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
-    
+      .search{
+        width: 400px;
+        margin-left: 100px;
+      }
       header{
         font-family: 'Noto Sans KR', sans-serif;
       }
      
-    
+     
       .container{
-        margin-top: 10px;
+        margin-top: 20px;
         font-size: small;
       }
-      .writeform{
-        margin: 100px;
+      .paging{
+        width: 110px;
+        margin: auto;
       }
-      .form-group-content{
-        
-      }
-    
+    .writebutton{
+        width: 400px;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+    .imgtable{
+      width: 1500px;
+      margin: auto;
+    }
+    .card-img-top{
+     width: 300px;
+     height: 400px;
+    }
+    .exhibitionform{
+      margin: 100px;
+      /* width: 1500px; */
+    }
+    .card{
+      display: inline-block;
+      margin: 15px;
+    }
+    .card-img-top{
+      width: 15rem;
+      height: 20rem;
+    }
  
-    
+
     </style>
   </head>
   <body>
     
 <header>
-  <!--navbar-->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><i class="fa-solid fa-building-columns"></i> NaExhibition</a>  
       <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="NoticeForm.html" style="color: white; font-weight: bold;">공지사항</a>
+            <a class="nav-link" aria-current="page" href="NoticeForm.html">공지사항</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" aria-current="page" href="ExhibitionList.html">전시회 목록</a>
+            <a class="nav-link dropdown-toggle" aria-current="page" href="ExhibitionList.html" style="color: white; font-weight: bold;">전시회 목록</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">요일별</a></li>
               <li><a class="dropdown-item" href="#">테마별</a></li>
@@ -145,40 +170,52 @@
   <div class="bg-wrap">
     <div class="bg-image"><img src="images/전시3.jpg" alt=""></div>
     <div class="bg-text">
-        <p>공지사항</p>
-        <p style="font-size: 30px;">comunity</p>
+        <p>전시회 상세정보</p>
+        <p style="font-size: 30px;">ExhibitionListDetail</p>
     </div>
   </div>
   <div>
-    <h1 style="text-align: center; margin-top: 60px;" >글작성</h1>
-    <hr>
-  </div>
-<!--글작성폼-->
-
-<div class="writeform">
-  <form>
-    <div class="form-group">
-        <label for="title">제목</label>
-        <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
-    </div>
-   
-    <div class="form-group-content">
-        <label for="content" >내용</label>
-        <textarea class="form-control" id="content" placeholder="내용을 입력하세요"  rows="20" cols="10" ></textarea>
-    </div>
-    
-      <div class="form-group">
-        <label for="exampleFormControlFile1">공지사항 파일 등록</label><br>
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-      </div>
-    
-  </form>
-  <div style="margin-top: 20px;">
-  <a href="NoticeForm.html" role="button" class="btn btn-secondary">취소</a>
-  <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+    <h1 style="text-align: center; margin-top: 60px;" >전시회 상세정보</h1>
   </div>
 </div>
- </div>
+<!-- 전시회 상세정보 -->
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">전시회명<br>"GLOF &amp; ART"&nbsp;</h1>
+        <p class="lead my-3">전시회기간&nbsp;2022.8.13~ 2022.9.14</p>
+        <p class="lead my-3">전시회 장소 &nbsp;서울 종로구 삼청로 122 MGFS100갤러리</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">공식홈페이지로 이동</a></p> 
+      </div>
+      
+      <p style="text-align: right; "><img src="images/golf&art포스터.jpg" alt="" style="width: 40%;" ></p>
+    </div>
+
+
+<div>
+    <div>
+    <p style="text-align: center;"><img src="images/golf&art포스터.jpg" alt=""  ></p>
+    </div>
+    <div>
+        <p class="" style="text-align: center;">"GLOF &amp; ART"&nbsp;</p>
+        <p class="" style="text-align: center;">KIM GYOUNG MIN x MGFS100&nbsp;</p>
+        <p class="" style="text-align: center; font-size: 15px;"><br></p>
+        <br>
+        <p class="" style="text-align: center;">&nbsp;사람, 가족, 일상의 행복한 순간들을 표현하는 김경민 작가와 MGFS100 갤러리가 기획한 GLOF &amp; ART 전시입니다.&nbsp;</p>
+        <p class="" style="text-align: center;">이번 "GLOF &amp; ART" 전시는 ‘골프와 아트의 만남’ 이라는 주제로 즐겁고 유니크한 골프 라이프를 제시합니다.&nbsp;</p>
+        <p class="" style="text-align: center;"><br></p>
+        <p class="" style="text-align: center;">&nbsp;골프와 아트를 향한 MGFS100의 진정성과 국내 최고의 조각가 김경민 작가님의 예술성이 담긴 다양한 골프 작품을 여러분들께 소개합니다.&nbsp;</p>
+        <p class="" style="text-align: center;">&nbsp;골프를 주제로 표현한 회화, 조각, 보스턴 백 등에 담긴 김경민 작가의 따뜻하고 에너지 넘치는 시선을 느껴보세요.</p>
+        <p class="" style="text-align: center;"><br></p>
+        <p class="" style="text-align: center;">&nbsp;2022.8.13~ 2022.9.14</p>
+    </div>
+
+    <br><br><br>
+    
+
+
+</div>
+
 
 <!--푸터-->
 <footer class="container">
